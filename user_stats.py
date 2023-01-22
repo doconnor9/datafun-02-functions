@@ -65,7 +65,7 @@ print()
 print(f"The median vault score is {median}")
 print()
 print(f"The mode for the vault scores is {mode}")
-
+print()
 
 # Descriptive: measure of spread
 
@@ -86,7 +86,7 @@ print(f"The standard deviation is {stdev:.2f}")
 print()
 print(f"The lowest vault score was {lowest} and the highest vault score was {highest}")
 print()
-
+print()
 
 # univariant time series data (one varabile over time)
 # typically, x (or time) is independent and
@@ -96,7 +96,8 @@ print()
 x_practice_hours = [4, 5, 6, 7, 8, 9, 10, 12, 14, 16, 18, 20]
 y_avg_all_around_score = [33.5, 34, 34.3, 35, 35.4, 35.8, 36, 36.4, 36.7, 37.1, 37.3, 37.6]
 
-
+xx_corr = statistics.correlation(x_practice_hours, x_practice_hours)
+xy_corr = statistics.correlation(x_practice_hours, y_avg_all_around_score)
 
 slope, intercept = statistics.linear_regression(x_practice_hours, y_avg_all_around_score)
 
@@ -115,17 +116,18 @@ print(f"Here's some XY data: ")
 print(f"The average number of practice hours is x: {x_practice_hours}")
 print(f"The average all around score is y: {y_avg_all_around_score}")
 print()
+print(f"The correlation between x_practice_hours and x_practice_hours is {xx_corr:.2f}")
+print(f"The correlation between x_practice_hours and y_avg_all_around_score is {xy_corr:.2f}")
+print()
+print()
 print("Calculate the slope and intercept of the best fit line:")
 print()
 print(f"slope = {slope:.2f}") 
 print(f"intercept = {intercept:.2f}")
-
-
 print()
 print(f"When x (number of practice hours per week) is 22,")
 print(f"   y (average all around score) is predicted to be {future_y:.2f}")
 print()
-
 print(f"When x (number of practice hours per week is 24,")
 print(f"   y (average all around score) is predicted to be {future_yy:.2f}")
 print()

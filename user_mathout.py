@@ -1,5 +1,6 @@
 """
-Created by Diandra O'Connor 1/18/23
+Diandra O'Connor 1/18/23
+Module 2, Task 3
 
 Results from running script created in user_math.py
 

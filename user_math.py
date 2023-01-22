@@ -5,10 +5,8 @@ Updated file with 3 functions related to gymnastics.
 Use built-in functions and 
 functions from the math module.
 
-To illustrate the ability to call functions and 
+Illustrate the ability to call functions and 
 display useful results to the user. 
-
-Use your textbook and the examples in this repo to get ideas.
 
 """
 
@@ -27,46 +25,38 @@ def get_area_of_lot(length, width):
     # Use a try / except / finally block when something 
     # could go wrong
     try: 
-        area = length * width # fix this
+        area = length * width 
         return area
     except Exception as ex:
         print(f"Error: {ex}")
         return None
 
 
-# define more functions here (see instuctions)
+# define more functions here 
 
-# average beam score
-# a function for average scores on beam
 def gymnast1_avg_beam_score(*scores):
+    """Return average beam score."""
     return sum(scores) / len(scores)
 
-# all around score
-# using fsum from the math module to show gymnast all-around score
+
 def gymnast_all_around_score(*scores):
+    """Return all around score (the sum of all individual event scores)."""
     return math.fsum(scores)
 
-# competition leotard cost
-# a function for determining cost of competition leotard with tax
+
 def competition_leo_with_tax(price):
-    return price * 1.08  # assuming a tax rate of 8%
-
-
-
-
+    """Return competition leotard cost with tax.""" # assuming a tax rate of 8%
+    return price * 1.08 
 
 
 
 # -------------------------------------------------------------
 # Call some functions and execute code!
 
-# This is very standard Python - it means
-# "If this module is the one being executed, i.e., the main module"
-# (as opposed to being imported by another module)
-# Literally: "if this module name == the name of the main module"
+
 if __name__ == "__main__":
 
-    # call your functions here (see instructions)
+    # calling functions and sharing results with user
     print("Explore some functions in the math module")
     print()
     print(f"math.comb(5,1) = {math.comb(5,1)}")
